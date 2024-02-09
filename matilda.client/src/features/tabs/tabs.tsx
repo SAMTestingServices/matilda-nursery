@@ -58,6 +58,7 @@ export function TabsAndContent() {
 
         <Box
         sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 224, width: '100%', flexDirection: orientation == 'vertical' ? 'row' : 'column' }}
+        style={{height: "500px"}}
     >
         <Tabs
             orientation={orientation}
@@ -66,6 +67,7 @@ export function TabsAndContent() {
             onChange={handleChange}
             aria-label="Vertical tabs example"
             sx={{ borderRight: 1, borderColor: 'divider' }}
+
         >
             {tabData.map((tab) => {
                 return (
