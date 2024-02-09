@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "sln0Ilvzj5KsA8eF8h7/b/rXVNt/qCHbZPWFYgLcNmfiKDGmhJPwzIB9YuNJ9Ue29kp8nj75HlrEJ1OpX8dScg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SHX\\source\\repos\\Matilda\\Matilda.Server\\Matilda.Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Shx\\Cache\\nuget\\microsoft.aspnetcore.spaproxy\\8.0.1\\microsoft.aspnetcore.spaproxy.8.0.1.nupkg.sha512",
+    "C:\\Users\\Shx\\Cache\\nuget\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Shx\\Cache\\nuget\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Shx\\Cache\\nuget\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Shx\\Cache\\nuget\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Shx\\Cache\\nuget\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Shx\\Cache\\nuget\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
