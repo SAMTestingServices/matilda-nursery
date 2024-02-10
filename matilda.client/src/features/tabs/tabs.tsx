@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Box, Tab, Tabs, Typography} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
 import {useAppSelector} from "../../hooks/store-hooks.ts";
-import {updateCurrentTab, updatePageOrientation} from "./tabs-slice.ts";
+import {updateCurrentTab, updatePageOrientation} from "./tabs-slice.tsx";
 
 export function TabsAndContent() {
 
@@ -23,6 +23,7 @@ export function TabsAndContent() {
                 hidden={value !== index}
                 id={`vertical-tabpanel-${index}`}
                 aria-labelledby={`vertical-tab-${index}`}
+                style={{width: "1000px", textAlign: "justify"}}
                 {...other}
             >
                 {value === index && (

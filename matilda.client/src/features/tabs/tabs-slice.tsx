@@ -1,5 +1,8 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import React from "react";
+import * as React from "react";
+import Home from "../../pages/home.tsx";
+import AboutUs from "../about-us/about-us.tsx";
+import Contact from "../contact/contact.tsx"
 
 interface ITab {
     id: number;
@@ -19,16 +22,17 @@ interface TabsState {
 const initialState: TabsState = {
     tabData: [
         { id: 0, title: 'Home'},
-        { id: 1, title: 'About Us' },
+        { id: 1, title: 'About Us', content:<AboutUs/> },
         { id: 2, title: 'Documents' },
         { id: 3, title: 'Testimonials' },
         { id: 4, title: 'Staff' },
         { id: 5, title: 'Gallery' },
-        { id: 6, title: 'Contact Us' }
+        { id: 6, title: 'Contact Us', content:<Contact/> }
     ],
     pageOrientation: 'vertical',
     currentTabId: 0
 };
+
 
 export const tabsSlice = createSlice({
     name: 'tabs',

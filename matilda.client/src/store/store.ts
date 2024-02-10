@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import tabsReducer from '../features/tabs/tabs-slice.ts'
+import tabsReducer from '../features/tabs/tabs-slice.tsx'
 
 
 // Import your slice reducers
