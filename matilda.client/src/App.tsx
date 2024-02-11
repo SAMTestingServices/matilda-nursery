@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import './App.css';
-import Home from "./pages/home.tsx";
 import {TabsAndContent} from "./features/tabs/tabs.tsx";
 
 interface Forecast {

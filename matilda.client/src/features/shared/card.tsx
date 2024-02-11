@@ -1,4 +1,4 @@
-import {Button, Card, CardActions, CardContent, Typography} from "@mui/material";
+import {Card, CardActions, CardContent} from "@mui/material";
 
 export default function BasicCard({ content, action,  }) {
     return (

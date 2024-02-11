@@ -14,7 +14,7 @@ const AboutUs = ()  => {
             <p>We are OFSTED registered and provide the children with a structured daily routine with both free play</p>
             <p>We offer 3 subsidised places for parents who meet certain criteria.</p>
             <h3>It's a community thing</h3>
-            <p>Being a community nursery means we are a not-for-profit organisation. This allows us to be highly competitive with our fees, but beyond that it means parents have a say in how the nursery is ran</p>
+            <p>Being a community nursery means we are a not-for-profit organisation. This allows us to be highly competitive with our fees, but beyond that it means we are parent-led: <br/>Our parents are on the nursery committee which means they have a say in how their child is looked after.</p>
             <h3>What else?</h3>
             <ul>
                 <li>Small numbers of children</li>

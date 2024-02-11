@@ -1,5 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import tabsReducer from '../features/tabs/tabs-slice.tsx'
+import tabsReducer from '../features/tabs/tabs-slice'
+import staffReducer from '../features/staff/staff-slice'
+import galleryReducer from '../features/gallery/gallery-slice'
 
 
 // Import your slice reducers
@@ -7,7 +9,10 @@ import tabsReducer from '../features/tabs/tabs-slice.tsx'
 
 export const store = configureStore({
     reducer: {
-        tabs: tabsReducer
+        tabs: tabsReducer,
+        staff: staffReducer,
+        gallery: galleryReducer,
+
         // someReducer
     },
     // middleware and devTools are automatically included

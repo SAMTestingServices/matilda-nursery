@@ -1,8 +1,4 @@
-import React, {ReactElement, ReactNode, useEffect, useState} from "react";
-import {Box, Button, Grid, Tab, Tabs, Typography} from "@mui/material";
-import {useDispatch, useSelector} from "react-redux";
-import {useAppSelector} from "../../hooks/store-hooks.ts";
-import {updateCurrentTab, updatePageOrientation} from "./tabs-slice.ts";
+import {Button, Grid, Tab, Tabs, Typography} from "@mui/material";
 import BasicCard from "../shared/card.tsx";
 
 const Contact = ()  => {

@@ -3,6 +3,9 @@ import * as React from "react";
 import Home from "../../pages/home.tsx";
 import AboutUs from "../about-us/about-us.tsx";
 import Contact from "../contact/contact.tsx"
+import Staff from "../staff/staff.tsx";
+import Gallery from "../gallery/gallery.tsx";
+import ADayInTheLife from "../a-day-in-the-life/a-day-in-the-life.tsx";
 
 interface ITab {
     id: number;
@@ -24,10 +27,11 @@ const initialState: TabsState = {
         { id: 0, title: 'Home'},
         { id: 1, title: 'About Us', content:<AboutUs/> },
         { id: 2, title: 'Documents' },
-        { id: 3, title: 'Testimonials' },
-        { id: 4, title: 'Staff' },
-        { id: 5, title: 'Gallery' },
-        { id: 6, title: 'Contact Us', content:<Contact/> }
+        { id: 3, title: 'A day in the life', content: <ADayInTheLife/> },
+        { id: 4, title: 'Testimonials' },
+        { id: 5, title: 'Staff',content:<Staff/> },
+        { id: 6, title: 'Gallery', content: <Gallery/> },
+        { id: 7, title: 'Contact Us', content:<Contact/> }
     ],
     pageOrientation: 'vertical',
     currentTabId: 0

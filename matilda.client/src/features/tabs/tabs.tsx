@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
-import {Box, Tab, Tabs, Typography} from "@mui/material";
-import {useDispatch, useSelector} from "react-redux";
+import React from "react";
+import {useDispatch} from "react-redux";
 import {useAppSelector} from "../../hooks/store-hooks.ts";
 import {updateCurrentTab, updatePageOrientation} from "./tabs-slice.tsx";
+import {Box, Tab, Tabs, Typography} from "@mui/material";
 
 export function TabsAndContent() {
 
