@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Matilda.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42fd35eeec370dbe7a494b0b2ccf5a6d60c8b96d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd70d60769845bf9db6e42fbc6e54270baa92918")]
 [assembly: System.Reflection.AssemblyProductAttribute("Matilda.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Matilda.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

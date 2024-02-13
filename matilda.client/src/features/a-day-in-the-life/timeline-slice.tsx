@@ -17,7 +17,8 @@ interface TimelineState {
 const initialState: TimelineState = {
     timelimeItems: [
         {id: 0, events: ['Morning drop-off starts', 'Breakfast is served'],time: '08:00'},
-        {id: 1, events: ['Breakfast time ends'],time: '09:00'}
+        {id: 1, events: ['Breakfast time ends'],time: '09:00'},
+        {id: 1, events: ['Outside play'],time: '10:00'}
         ]
 };
 
