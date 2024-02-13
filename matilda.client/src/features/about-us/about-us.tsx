@@ -1,8 +1,4 @@
-import React, {ReactElement, ReactNode, useEffect, useState} from "react";
-import {Box, Tab, Tabs, Typography} from "@mui/material";
-import {useDispatch, useSelector} from "react-redux";
-import {useAppSelector} from "../../hooks/store-hooks.ts";
-import {updateCurrentTab, updatePageOrientation} from "./tabs-slice.ts";
+import React from "react";
 
 const AboutUs = ()  => {
 

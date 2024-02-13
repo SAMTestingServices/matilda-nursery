@@ -28,16 +28,12 @@ export const gallerySlice = createSlice({
     initialState: initialState,
     reducers: {
         // define reducers and actions
-        updateStaff: (state, action: PayloadAction<IPicture>) =>{
-            return {...state};
-        },
 
     },
 });
 
 // Export actions
 export const {
-    updateStaff
      } = gallerySlice.actions;
 
 // Export reducer
