@@ -63,7 +63,7 @@ export function TabsAndContent() {
                 flexGrow: 1,
                 bgcolor: 'background.paper',
                 display: 'flex',
-                height: 224, // Consider making this relative or auto-adjusting
+                height: '100%', // Consider making this relative or auto-adjusting
                 width: '100%',
                 flexDirection: orientation === 'vertical' ? 'row' : 'column'
             }}
