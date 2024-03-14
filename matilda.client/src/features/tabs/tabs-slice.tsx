@@ -11,6 +11,7 @@ interface ITab {
     id: number;
     title: string;
     content?: React.ReactNode;
+    backgroundColour: string;
 }
 
 type Orientation = 'vertical' | 'horizontal';
@@ -24,14 +25,14 @@ interface TabsState {
 
 const initialState: TabsState = {
     tabData: [
-        { id: 0, title: 'Home'},
-        { id: 1, title: 'About Us', content:<AboutUs/> },
-        { id: 2, title: 'Documents' },
-        { id: 3, title: 'A day in the life', content: <ADayInTheLife/> },
-        { id: 4, title: 'Testimonials' },
-        { id: 5, title: 'Staff',content:<Staff/> },
-        { id: 6, title: 'Gallery', content: <Gallery/> },
-        { id: 7, title: 'Contact Us', content:<Contact/> }
+        { id: 0, title: 'Home', backgroundColour: 'red'},
+        { id: 1, title: 'About Us', content:<AboutUs/> , backgroundColour: 'yellow'},
+        { id: 2, title: 'Documents' , backgroundColour: 'turquouise'},
+        { id: 3, title: 'A day in the life', content: <ADayInTheLife/> , backgroundColour: 'brown'},
+        { id: 4, title: 'Testimonials' , backgroundColour: 'pink'},
+        { id: 5, title: 'Staff',content:<Staff/> , backgroundColour: 'red'},
+        { id: 6, title: 'Gallery', content: <Gallery/> , backgroundColour: 'red'},
+        { id: 7, title: 'Contact Us', content:<Contact/> , backgroundColour: 'red'}
     ],
     pageOrientation: 'vertical',
     currentTabId: 0
