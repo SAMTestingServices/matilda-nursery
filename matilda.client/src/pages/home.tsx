@@ -12,7 +12,9 @@ export interface ITab {
 
 function Home() {
     return (
-        <V2ContractDoc></V2ContractDoc>
+        <>
+            <div style={{backgroundColor: 'rgba(255, 255, 255, 0.5)'}}></div>
+        </>
     );
 }
 

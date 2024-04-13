@@ -25,7 +25,7 @@ interface TabsState {
 
 const initialState: TabsState = {
     tabData: [
-        { id: 0, title: 'Home', backgroundColour: 'red'},
+        { id: 0, title: 'Home', content:<Home/> , backgroundColour: 'red'},
         { id: 1, title: 'About Us', content:<AboutUs/> , backgroundColour: 'yellow'},
         { id: 2, title: 'Documents' , backgroundColour: 'turquouise'},
         { id: 3, title: 'A day in the life', content: <ADayInTheLife/> , backgroundColour: 'brown'},

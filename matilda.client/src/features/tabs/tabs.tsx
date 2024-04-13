@@ -4,6 +4,9 @@ import { useAppSelector } from "../../hooks/store-hooks.ts";
 import { updateCurrentTab, updatePageOrientation } from "./tabs-slice.tsx";
 import { Box, Tab, Tabs, Typography } from "@mui/material";
 
+
+export const bgroundStyle='rgba(255, 255, 255, 0.6)';
+export const bgroundStyleChild='rgba(255, 255, 255, 0)';
 export function TabsAndContent() {
 
     interface TabPanelProps {
@@ -63,7 +66,7 @@ export function TabsAndContent() {
         <Box
             sx={{
                 flexGrow: 1,
-                bgcolor: 'background.paper',
+                bgcolor: bgroundStyleChild,
                 display: 'flex',
                 height: '100%',
                 width: '100%',
