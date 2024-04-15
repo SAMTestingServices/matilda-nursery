@@ -4,9 +4,10 @@ import { useAppSelector } from "../../hooks/store-hooks.ts";
 import { updateCurrentTab, updatePageOrientation } from "./tabs-slice.tsx";
 import { Box, Tab, Tabs, Typography } from "@mui/material";
 
-
 export const bgroundStyle='rgba(255, 255, 255, 0.6)';
 export const bgroundStyleChild='rgba(255, 255, 255, 0)';
+export const xylophoneColors = ['#e57373', '#F06292', '#BA68C8', '#9575CD', '#7986CB', '#64B5F6', '#4FC3F7', '#4DD0E1', '#4DB6AC', '#81C784', '#AED581', '#DCE775', '#FFF176', '#FFD54F', '#FFB74D', '#FF8A65'];
+
 export function TabsAndContent() {
 
     interface TabPanelProps {
@@ -60,8 +61,6 @@ export function TabsAndContent() {
         };
     }
 
-    const xylophoneColors = ['#e57373', '#F06292', '#BA68C8', '#9575CD', '#7986CB', '#64B5F6', '#4FC3F7', '#4DD0E1', '#4DB6AC', '#81C784', '#AED581', '#DCE775', '#FFF176', '#FFD54F', '#FFB74D', '#FF8A65'];
-
     const tabs = (
         <Box
             sx={{
@@ -82,7 +81,8 @@ export function TabsAndContent() {
                     boxShadow: '0 3px 5px rgba(0,0,0,0.2)', // Subtle shadow for 3D effect
                     textTransform: 'none', // Keep text more natural, child-friendly
                     fontFamily: '"Comic Sans MS", cursive, sans-serif', // Choose a playful font
-                    fontWeight: 'bold',
+                    border:'solid',
+                    // fontWeight: 'bold',
                     '&:hover': {
                         // Maintain the hover effect, perhaps brighten the color
                         backgroundColor: '#ff8a65',
@@ -99,11 +99,13 @@ export function TabsAndContent() {
                 sx={{
                     borderRight: 1,
                     borderColor: 'divider',
+                    width:'500px',
                     '& .MuiTab-root': { // Targeting the root of the Tab component for general styling
-                        borderRadius: '10px', // Rounded corners
+                        paddingBottom:'5px',
+                        //borderRadius: '10px', // Rounded corners
                         // backgroundColor: '#FFF', // Default background color, consider dynamically changing this per tab for the xylophone effect
-                        marginRight: '8px', // Space between tabs to mimic xylophone bar separation
-                        boxShadow: '0px 2px 4px rgba(0,0,0,0.1)', // Adding some shadow for depth
+                        // marginRight: '8px', // Space between tabs to mimic xylophone bar separation
+                        //boxShadow: '0px 2px 4px rgba(0,0,0,0.1)', // Adding some shadow for depth
                         '&:hover': {
                             transform: 'scale(1.05)', // Slight scale up on hover
                             boxShadow: '0px 4px 8px rgba(0,0,0,0.2)', // Enhanced shadow on hover
@@ -117,7 +119,7 @@ export function TabsAndContent() {
                         key={tab.id}
                         sx={{
                             backgroundColor: xylophoneColors[index % xylophoneColors.length], // Cycle through colors
-                            width: (20 + (index*2)) + '%'
+                            width: orientation === 'vertical' ? ((40 + (index*2)) + '%') : 'inherit'
                             // '&:hover': {
                             //     // backgroundColor: /* a slightly brighter or different shade of the base color */,
                             // }
