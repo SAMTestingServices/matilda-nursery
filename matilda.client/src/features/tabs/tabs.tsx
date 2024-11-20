@@ -3,10 +3,8 @@ import { useDispatch } from "react-redux";
 import { useAppSelector } from "../../hooks/store-hooks.ts";
 import { updateCurrentTab, updatePageOrientation } from "./tabs-slice.tsx";
 import { Box, Tab, Tabs, Typography } from "@mui/material";
+import {bgroundStyleChild, xylophoneColors} from "../../global-constants/constants";
 
-export const bgroundStyle='rgba(255, 255, 255, 0.6)';
-export const bgroundStyleChild='rgba(255, 255, 255, 0)';
-export const xylophoneColors = ['#e57373', '#F06292', '#BA68C8', '#9575CD', '#7986CB', '#64B5F6', '#4FC3F7', '#4DD0E1', '#4DB6AC', '#81C784', '#AED581', '#DCE775', '#FFF176', '#FFD54F', '#FFB74D', '#FF8A65'];
 
 export function TabsAndContent() {
 
@@ -29,7 +27,7 @@ export function TabsAndContent() {
                 hidden={value !== index}
                 id={`vertical-tabpanel-${index}`}
                 aria-labelledby={`vertical-tab-${index}`}
-                style={{ width: "100%", textAlign: "justify" }} // Removed fixed width
+                style={{ width: "100%", textAlign: "justify", minHeight: '85%' }} // Removed fixed width
                 {...other}
             >
                 {value === index && (
@@ -44,7 +42,7 @@ export function TabsAndContent() {
     const dispatch = useDispatch();
 
     const switchOrientation = () => {
-        const isVertical = window.innerHeight > window.innerWidth;
+        const isVertical = window.innerHeight + (0.5*window.innerHeight) > window.innerWidth;
         dispatch(updatePageOrientation(isVertical ? 'horizontal' : 'vertical'));
     };
 
@@ -77,11 +75,13 @@ export function TabsAndContent() {
                     // Basic styling for tabs to look like xylophone keys
                     // /backgroundColor: '#e57373', // Default color, consider making this dynamic
                     margin: '2px', // Space between keys
-                    borderRadius: '5px', // Rounded edges
-                    boxShadow: '0 3px 5px rgba(0,0,0,0.2)', // Subtle shadow for 3D effect
                     textTransform: 'none', // Keep text more natural, child-friendly
                     fontFamily: '"Comic Sans MS", cursive, sans-serif', // Choose a playful font
-                    border:'solid',
+                    border:'solid black',
+                    borderRadius: '5px', // Rounded edges
+                    boxShadow: '0 3px 5px rgba(0,0,0,0.2)',                    // Subtle shadow for 3D effect
+                    color: 'white',
+                    fontWeight: 'bold',
                     // fontWeight: 'bold',
                     '&:hover': {
                         // Maintain the hover effect, perhaps brighten the color
@@ -99,9 +99,22 @@ export function TabsAndContent() {
                 sx={{
                     borderRight: 1,
                     borderColor: 'divider',
-                    width:'500px',
+                    width: orientation === 'vertical' ? '20%' : '100%',
+                    height: '100%',
+                    padding: '2%',
+                    display:'flex',
+                    flexDirection: orientation === 'vertical' ? 'column' : 'row',
+                    justifyContent: 'space-between',
                     '& .MuiTab-root': { // Targeting the root of the Tab component for general styling
                         paddingBottom:'5px',
+                        flexGrow: 1, // Ensures all tabs grow to occupy available space
+                        display: 'flex',
+                        alignItems: 'center', // Center text vertically
+                        justifyContent: 'center', // Center text horizontally
+                        // padding: '40px', // Optional: Adjust padding for better appearance
+                        marginTop: orientation == 'vertical' ? '7%' : '1%',
+                        padding: orientation == 'vertical' ? '7%' : '0%',
+                        textTransform: 'none',
                         //borderRadius: '10px', // Rounded corners
                         // backgroundColor: '#FFF', // Default background color, consider dynamically changing this per tab for the xylophone effect
                         // marginRight: '8px', // Space between tabs to mimic xylophone bar separation
@@ -118,8 +131,9 @@ export function TabsAndContent() {
                         label={tab.title}
                         key={tab.id}
                         sx={{
-                            backgroundColor: xylophoneColors[index % xylophoneColors.length], // Cycle through colors
-                            width: orientation === 'vertical' ? ((40 + (index*2)) + '%') : 'inherit'
+                            backgroundColor: xylophoneColors[Math.floor(Math.random() * xylophoneColors.length)], // Cycle through colors
+                            width: orientation === 'vertical' ? ((40 + (index*5)) + '%') : 'inherit',
+                            textShadow: '2px 2px 4px #000000',
                             // '&:hover': {
                             //     // backgroundColor: /* a slightly brighter or different shade of the base color */,
                             // }

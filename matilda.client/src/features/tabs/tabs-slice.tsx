@@ -1,11 +1,11 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import * as React from "react";
-import Home from "../../pages/home.tsx";
 import AboutUs from "../about-us/about-us.tsx";
 import Contact from "../contact/contact.tsx"
 import Staff from "../staff/staff.tsx";
 import Gallery from "../gallery/gallery.tsx";
 import ADayInTheLife from "../a-day-in-the-life/a-day-in-the-life.tsx";
+import Home from "../home/home";
 
 interface ITab {
     id: number;
