@@ -1,8 +1,4 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import * as React from "react";
-import Home from "../../pages/home.tsx";
-import AboutUs from "../about-us/about-us.tsx";
-import Contact from "../contact/contact.tsx"
 
 interface IStaff {
     id: number;

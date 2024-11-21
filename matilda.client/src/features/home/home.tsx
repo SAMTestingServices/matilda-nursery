@@ -72,10 +72,10 @@ const Home = () => {
                                     boxShadow: '0 3px 5px rgba(0,0,0,0.2)',                    // Subtle shadow for 3D effect
 
                                     // fontWeight: 'bold',
-                                    '&:hover': {
-                                        // Maintain the hover effect, perhaps brighten the color
-                                        backgroundColor: '#ff8a65',
-                                    },
+                                    // '&:hover': {
+                                    //     // Maintain the hover effect, perhaps brighten the color
+                                    //     backgroundColor: '#ff8a65',
+                                    // },
                                 }}
                             >
                                 {char.trim() ? char : '\u00A0'}
@@ -118,10 +118,10 @@ const Home = () => {
                                     textShadow: '6px 4px 2px black',// Subtle shadow for 3D effect
 
                                     // fontWeight: 'bold',
-                                    '&:hover': {
-                                        // Maintain the hover effect, perhaps brighten the color
-                                        backgroundColor: '#ff8a65',
-                                    },
+                                    // '&:hover': {
+                                    //     // Maintain the hover effect, perhaps brighten the color
+                                    //     backgroundColor: '#ff8a65',
+                                    // },
                                 }}
                             >
                                 {char.trim() ? char : '\u00A0'}
